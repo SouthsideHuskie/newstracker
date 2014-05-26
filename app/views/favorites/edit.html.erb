@@ -1,0 +1,51 @@
+<div class="page-header">
+  <h1>Edit Favorite #<%= @favorite.id %></h1>
+</div>
+
+<% if @favorite.errors.any? %>
+  <% @favorite.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<form action="/update_favorite/<%= @favorite.id %>" class="form-horizontal">
+
+  <!-- Label and input for user_id -->
+  <div class="form-group">
+
+    <label for="user_id" class="col-sm-2 control-label">
+      User
+    </label>
+    <div class="col-sm-10">
+
+      <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @favorite.user_id %>">
+
+    </div>
+
+  </div>
+
+
+  <!-- Label and input for article_id -->
+  <div class="form-group">
+
+    <label for="article_id" class="col-sm-2 control-label">
+      Article
+    </label>
+    <div class="col-sm-10">
+
+      <input type="text" id="article_id" name="article_id" placeholder="Article" class="form-control" value="<%= @favorite.article_id %>">
+
+    </div>
+
+  </div>
+
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" value="Update Favorite" class="btn btn-primary">
+    </div>
+  </div>
+</form>

@@ -1,0 +1,52 @@
+<div class="page-header">
+  <h1>Favorites</h1>
+</div>
+
+
+<p><a href="/favorites/new" class="btn btn-primary">Add a New Favorite</a></p>
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+
+      <th>User</th>
+
+      <th>Article</th>
+
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @favorites.each do |favorite| %>
+      <tr>
+
+        <td><%= favorite.user_id %></td>
+
+        <td><%= favorite.article_id %></td>
+
+
+        <td>
+          <a href="/favorites/<%= favorite.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/favorites/<%= favorite.id %>/edit" class="btn btn-warning">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_favorite/<%= favorite.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
