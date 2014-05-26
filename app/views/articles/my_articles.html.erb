@@ -27,7 +27,7 @@
   </thead>
 
   <tbody>
-    <% @articles.each do |article| %>
+    <% current_user.articles.each do |article| %>
       <tr>
 
         <td><%= article.title %></td>

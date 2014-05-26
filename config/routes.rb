@@ -53,6 +53,12 @@ Rails.application.routes.draw do
   # Root
   root 'articles#index'
 
+  get('/my_articles', { :controller => 'articles', :action => 'my_articles' })
+
+  get('/my_favorites', { :controller => 'favorites', :action => 'my_favorites' })
+
+  get('/my_comments', { :controller => 'comments', :action => 'my_comments' })
+
   #------------------------------
 
   # The priority is based upon order of creation: first created -> highest priority.

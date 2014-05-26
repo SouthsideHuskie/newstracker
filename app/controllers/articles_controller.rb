@@ -71,4 +71,8 @@ class ArticlesController < ApplicationController
     redirect_to "/articles", :notice => "Article deleted."
 
   end
+
+  def my_articles
+   @articles = Article.all
+ end
 end

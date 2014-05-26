@@ -63,4 +63,9 @@ class CommentsController < ApplicationController
     redirect_to "/comments", :notice => "Comment deleted."
 
   end
+
+def my_comments
+  @comments = Comment.all
+end
+
 end

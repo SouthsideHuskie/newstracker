@@ -5,7 +5,7 @@
   <title>Newstracker</title>
 
 
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/lumen/bootstrap.min.css">
 
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 
@@ -17,7 +17,7 @@
   </style>
 
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+
   <%= csrf_meta_tags %>
 
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -42,19 +42,23 @@
       <ul class="nav navbar-nav">
 
 
-        <li><a href="/comments">Comments</a></li>
+        <li><a href="/comments">Comments Index</a></li>
 
-        <li><a href="/favorites">Favorites</a></li>
+        <li><a href="/favorites">Favorites Index</a></li>
 
-        <li><a href="/articles">Articles</a></li>
+        <li><a href="/articles">Articles Index</a></li>
 
-        <li><a href="#">About</a></li>
+        <li><a href="/my_articles">My Articles</a></li>
+
+        <li><a href="/my_favorites">My Favorites</a></li>
+
+        <li><a href="/my_comments">My Comments</a></li>
 
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <% if false %>
-          <li><a href="/users/edit">Oscar the Grouch</a></li>
+        <% if current_user.present? %>
+          <li><a href="/users/edit"><%= current_user.email %></a></li>
           <li><a href="/users/sign_out" data-method="delete">Sign out</a></li>
         <% else %>
           <li><a href="/users/sign_up">Sign up</a></li>
