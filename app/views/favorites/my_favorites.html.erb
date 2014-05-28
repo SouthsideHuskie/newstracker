@@ -22,9 +22,9 @@
     <% current_user.favorites.each do |favorite| %>
       <tr>
 
-        <td><%= favorite.user_id %></td>
+        <td><%= favorite.user.email %></td>
 
-        <td><%= favorite.article_id %></td>
+        <td><%= favorite.article.title %></td>
 
 
         <td>
