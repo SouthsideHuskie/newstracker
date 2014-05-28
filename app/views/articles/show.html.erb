@@ -73,11 +73,11 @@
 <dl><p><b>Favorited By:</b></p></dl>
 
 <ul class="media-list">
-  <%= @article.fans do |fan| %>
+  <% @article.fans.each do |fan| %>
     <li class="media">
       <div class="media-body">
         <h4 class="media-heading"></h4>
-        <%= fan.user.id %>
+        <%= fan.email %>
       </div>
     </li>
   <% end %>
