@@ -81,11 +81,8 @@ class ArticlesController < ApplicationController
   def alltag
     @articles = Article.where({ :tag => params[:tag]})
   end
-<<<<<<< HEAD
 
     def mytag
     @articles = Article.where({ :tag => params[:tag]})
   end
-=======
->>>>>>> 81279d0d7364e0d9a2a0c68a74f4eb6e453705b8
 end
