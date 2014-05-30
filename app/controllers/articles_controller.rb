@@ -76,5 +76,9 @@ class ArticlesController < ApplicationController
   def my_articles
    @articles = Article.all
 
- end
+  end
+
+  def alltag
+    @articles = Article.where({ :tag => params[:tag]})
+  end
 end

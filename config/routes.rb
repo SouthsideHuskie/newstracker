@@ -60,6 +60,11 @@ Rails.application.routes.draw do
 
   get('/my_comments', { :controller => 'comments', :action => 'my_comments' })
 
+  get('/articles/tag/:tag', { :controller => 'articles', :action => 'alltag' })
+
+
+
+
   #------------------------------
 
   # The priority is based upon order of creation: first created -> highest priority.
