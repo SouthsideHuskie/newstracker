@@ -1,0 +1,54 @@
+<div class="page-header">
+  <h1>Articles</h1>
+</div>
+
+
+<p><a href="/articles/new" class="btn btn-primary">Add a New Article</a></p>
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+
+      <th>Title</th>
+
+      <th>Link to Article</th>
+
+      <th>Tag</th>
+
+      <th>User</th>
+
+      <th>Description</th>
+
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+
+        <td><%= article.title %></td>
+
+        <td><a href="<%= article.article_url %>" target="_blank">Link to Article </a></td>
+
+        <td><%= article.tag %></td>
+
+        <td><%= article.user.email%></td>
+
+        <td><%= article.description %></td>
+
+
+        <td>
+          <a href="/articles/<%= article.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
