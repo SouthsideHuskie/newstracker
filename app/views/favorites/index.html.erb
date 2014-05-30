@@ -10,7 +10,7 @@
       <th>User</th>
       <th>Tag</th>
       <th>Article</th>
-
+      <th>Link to Article</th>
       <th></th>
       <th></th>
       <th></th>
@@ -27,17 +27,15 @@
 
         <td><%= favorite.article.title %></td>
 
+          <td><a href="<%= favorite.article.article_url %>" target="_blank">Link to Article </a></td>
+
 
         <td>
-          <a href="/favorites/<%= favorite.id %>" class="btn btn-primary">
+          <a href="/articles/<%= favorite.id %>" class="btn btn-primary">
             <i class="fa fa-search-plus"></i>
           </a>
         </td>
-        <td>
-          <a href="/favorites/<%= favorite.id %>/edit" class="btn btn-warning">
-            <i class="fa fa-edit"></i>
-          </a>
-        </td>
+
         <td>
           <a href="/delete_favorite/<%= favorite.id %>" class="btn btn-danger">
             <i class="fa fa-trash-o"></i>
