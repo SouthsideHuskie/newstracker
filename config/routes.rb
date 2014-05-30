@@ -62,7 +62,11 @@ Rails.application.routes.draw do
 
   get('/articles/tag/:tag', { :controller => 'articles', :action => 'alltag' })
 
+<<<<<<< HEAD
   get('/articles/mytag/:tag', { :controller => 'articles', :action => 'mytag' })
+=======
+
+>>>>>>> 81279d0d7364e0d9a2a0c68a74f4eb6e453705b8
 
 
   #------------------------------
