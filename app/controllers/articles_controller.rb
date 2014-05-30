@@ -83,6 +83,6 @@ class ArticlesController < ApplicationController
   end
 
     def mytag
-    @articles = Article.where({ :tag => params[:tag]})
+    @articles = Article.where({ :tag => params[:tag]}).where({:user_id => current_user.id})
   end
 end

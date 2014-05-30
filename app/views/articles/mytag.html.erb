@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1><%= params[:tag] %></h1>
+  <h1>My Artciles Tagged <%= params[:tag] %></h1>
 </div>
 
 
@@ -27,7 +27,7 @@
   </thead>
 
   <tbody>
-    <% current_user.articles.each do |article| %>
+    <% @articles.each do |article| %>
       <tr>
 
         <td><%= article.title %></td>
@@ -36,7 +36,7 @@
 
         <td><%= article.tag %></td>
 
-        <td><%= current_user.email %></td>
+        <td><%= article.user.email %></td>
 
         <td><%= article.description %></td>
 
