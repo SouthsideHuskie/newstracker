@@ -53,6 +53,58 @@
 
       </ul>
 
+#---
+      <div class="btn-group">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+    Favorites <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">Politics</a></li>
+    <li><a href="#">Markets</a></li>
+    <li><a href="#">Science-Technology</a></li>
+    <li><a href="#">World</a></li>
+    <li><a href="#">Sports</a></li>
+    <li><a href="#">Other</a></li>
+    <li class="divider"></li>
+    <li><a href="/favorites">Favorites Index</a></li>
+  </ul>
+</div>
+
+
+      <div class="btn-group">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+    Articles <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="/articles/tag/Politics">Politics</a></li>
+    <li><a href="/articles/tag/Markets">Markets</a></li>
+    <li><a href="/articles/tag/Science-Technology">Science-Technology</a></li>
+    <li><a href="/articles/tag/World">World</a></li>
+    <li><a href="/articles/tag/Sports">Sports</a></li>
+    <li><a href="/articles/tag/Other">Other</a></li>
+    <li class="divider"></li>
+    <li><a href="/articles">Articles Index</a></li>
+  </ul>
+</div>
+
+
+      <div class="btn-group">
+  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+    My Articles <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="/articles/mytag/Politics">Politics</a></li>
+    <li><a href="/articles/mytag/Markets">Markets</a></li>
+    <li><a href="/articles/mytag/Science-Technology">Science-Technology</a></li>
+    <li><a href="/articles/mytag/World">World</a></li>
+    <li><a href="/articles/mytag/Sports">Sports</a></li>
+    <li><a href="/articles/mytag/Other">Other</a></li>
+    <li class="divider"></li>
+    <li><a href="/my_articles">My Articles Index</a></li>
+  </ul>
+</div>
+
+#-----
       <ul class="nav navbar-nav navbar-right">
         <% if current_user.present? %>
           <li><a href="/users/edit"><%= current_user.email %></a></li>
@@ -62,7 +114,10 @@
           <li><a href="/users/sign_in">Sign in</a></li>
         <% end %>
       </ul>
-    </div><!-- /.navbar-collapse -->
+
+    </div>
+
+    <!-- /.navbar-collapse -->
   </nav>
 
   <div class="container">
