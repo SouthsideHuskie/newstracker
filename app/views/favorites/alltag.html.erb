@@ -1,0 +1,49 @@
+<div class="page-header">
+  <h1>Favorites Tagged <%= params[:tag] %></h1>
+</div>
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+
+      <th>User</th>
+      <th>Tag</th>
+      <th>Article</th>
+      <th>Link to Article</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @favorites.each do |favorite| %>
+      <tr>
+
+        <td><%= favorite.user.email %></td>
+
+        <td><%= favorite.article.tag %></td>
+
+        <td><%= favorite.article.title %></td>
+
+          <td><a href="<%= favorite.article.article_url %>" target="_blank">Link to Article </a></td>
+
+
+        <td>
+          <a href="/articles/<%= favorite.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+
+        <td>
+          <a href="/delete_favorite/<%= favorite.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

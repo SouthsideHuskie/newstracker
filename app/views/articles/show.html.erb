@@ -41,7 +41,7 @@
 
 
   <dt>User</dt>
-  <dd><%= @article.user_id %></dd>
+  <dd><%= @article.user.email %></dd>
 
 
   <dt>Description</dt>
@@ -63,7 +63,7 @@
   <% @article.comments.each do |comment| %>
 <tr>
         <td><%= comment.content %></td>
-        <td><%= comment.user_id %></b></td>
+        <td><%= comment.user.email %></b></td>
 </tr>
   <% end %>
 

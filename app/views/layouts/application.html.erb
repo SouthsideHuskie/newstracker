@@ -39,32 +39,19 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
 
-        <li><a href="/favorites">Favorites Index</a></li>
 
-        <li><a href="/articles">Articles Index</a></li>
-
-        <li><a href="/my_articles">My Articles</a></li>
-
-        <li><a href="/my_favorites">My Favorites</a></li>
-
-        <li><a href="/my_comments">My Comments</a></li>
-
-      </ul>
-
-#---
       <div class="btn-group">
   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
     Favorites <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-    <li><a href="#">Politics</a></li>
-    <li><a href="#">Markets</a></li>
-    <li><a href="#">Science-Technology</a></li>
-    <li><a href="#">World</a></li>
-    <li><a href="#">Sports</a></li>
-    <li><a href="#">Other</a></li>
+    <li><a href="/favorites/tag/Politics">Politics</a></li>
+    <li><a href="/favorites/tag/Markets">Markets</a></li>
+    <li><a href="/favorites/tag/Science-Technology">Science-Technology</a></li>
+    <li><a href="/favorites/tag/World">World</a></li>
+    <li><a href="/favorites/tag/Sports">Sports</a></li>
+    <li><a href="/favorites/tag/Other">Other</a></li>
     <li class="divider"></li>
     <li><a href="/favorites">Favorites Index</a></li>
   </ul>
@@ -104,7 +91,38 @@
   </ul>
 </div>
 
-#-----
+      <div class="btn-group">
+  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+    My Favorites <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="/favorites/mytag/Politics">Politics</a></li>
+    <li><a href="/favorites/mytag/Markets">Markets</a></li>
+    <li><a href="/favorites/mytag/Science-Technology">Science-Technology</a></li>
+    <li><a href="/favorites/mytag/World">World</a></li>
+    <li><a href="/favorites/mytag/Sports">Sports</a></li>
+    <li><a href="/favorites/mytag/Other">Other</a></li>
+    <li class="divider"></li>
+    <li><a href="/my_favorites">My Favorites Index</a></li>
+  </ul>
+</div>
+
+      <div class="btn-group">
+  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+    My Comments <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="/comments/mytag/Politics">Politics</a></li>
+    <li><a href="/comments/mytag/Markets">Markets</a></li>
+    <li><a href="/comments/mytag/Science-Technology">Science-Technology</a></li>
+    <li><a href="/comments/mytag/World">World</a></li>
+    <li><a href="/comments/mytag/Sports">Sports</a></li>
+    <li><a href="/comments/mytag/Other">Other</a></li>
+    <li class="divider"></li>
+    <li><a href="/my_comments">My Comments Index</a></li>
+  </ul>
+</div>
+
       <ul class="nav navbar-nav navbar-right">
         <% if current_user.present? %>
           <li><a href="/users/edit"><%= current_user.email %></a></li>

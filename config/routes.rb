@@ -64,6 +64,13 @@ Rails.application.routes.draw do
 
   get('/articles/mytag/:tag', { :controller => 'articles', :action => 'mytag' })
 
+  get('/favorites/tag/:tag', { :controller => 'favorites', :action => 'alltag' })
+
+  get('/favorites/mytag/:tag', { :controller => 'favorites', :action => 'mytag' })
+
+  get('/comments/tag/:tag', { :controller => 'comments', :action => 'alltag' })
+
+  get('/comments/mytag/:tag', { :controller => 'comments', :action => 'mytag' })
 
   #------------------------------
 

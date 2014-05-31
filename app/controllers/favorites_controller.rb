@@ -64,5 +64,12 @@ def my_favorites
   @favorites = Favorite.all
 end
 
+  def alltag
+    @favorites = Favorite.all
 
+  end
+
+    def mytag
+    @favorites = Favorite.where({:user_id => current_user.id})
+  end
 end

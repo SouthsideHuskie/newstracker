@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
 
 
     if @comment.save
-      redirect_to "/comments", :notice => "Comment created successfully."
+      redirect_to "/articles/", :notice => "Comment created successfully."
     else
       render 'new'
     end
@@ -67,5 +67,11 @@ class CommentsController < ApplicationController
 def my_comments
   @comments = Comment.all
 end
+  def alltag
+  @comments = Comment.all
+  end
 
+    def mytag
+  @comments = Comment.all
+  end
 end
