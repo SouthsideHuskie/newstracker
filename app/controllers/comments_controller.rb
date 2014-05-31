@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
 
 
     if @comment.save
-      redirect_to "/articles/", :notice => "Comment created successfully."
+      redirect_to "/articles/#{@comment.article_id}", :notice => "Comment created successfully."
     else
       render 'new'
     end
@@ -47,7 +47,7 @@ class CommentsController < ApplicationController
 
 
     if @comment.save
-      redirect_to "/comments", :notice => "Comment updated successfully."
+      redirect_to "/my_comments", :notice => "Comment updated successfully."
     else
       render 'edit'
     end
@@ -60,7 +60,7 @@ class CommentsController < ApplicationController
     @comment.destroy
 
 
-    redirect_to "/comments", :notice => "Comment deleted."
+    redirect_to "/my_comments", :notice => "Comment deleted."
 
   end
 
