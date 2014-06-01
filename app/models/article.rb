@@ -6,4 +6,6 @@ class Article < ActiveRecord::Base
   has_many :tags
   has_many :comments
 
+  validates :article_url, :presence => true, :uniqueness => { :scope => :article_url }
+
 end

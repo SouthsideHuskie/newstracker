@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
 
 
     if @article.save
-      redirect_to "/articles", :notice => "Article created successfully."
+      redirect_to "/my_articles", :notice => "Article created successfully."
     else
       render 'new'
     end
@@ -56,7 +56,7 @@ class ArticlesController < ApplicationController
 
 
     if @article.save
-      redirect_to "/articles", :notice => "Article updated successfully."
+      redirect_to "/my_articles", :notice => "Article updated successfully."
     else
       render 'edit'
     end
@@ -69,7 +69,7 @@ class ArticlesController < ApplicationController
     @article.destroy
 
 
-    redirect_to "/articles", :notice => "Article deleted."
+    redirect_to "/my_articles", :notice => "Article deleted."
 
   end
 
