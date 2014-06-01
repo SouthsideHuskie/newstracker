@@ -7,10 +7,10 @@
   <thead>
     <tr>
 
-      <th>User</th>
-      <th>Tag</th>
       <th>Article</th>
       <th>Link to Article</th>
+      <th>User</th>
+      <th>Tag</th>
       <th></th>
       <th></th>
       <th></th>
@@ -21,13 +21,15 @@
     <% @favorites.each do |favorite| %>
       <tr>
 
+        <td><%= favorite.article.title %></td>
+
+          <td><a href="<%= favorite.article.article_url %>" target="_blank">Link to Article </a></td>
+
         <td><%= favorite.user.email %></td>
 
         <td><%= favorite.article.tag %></td>
 
-        <td><%= favorite.article.title %></td>
 
-          <td><a href="<%= favorite.article.article_url %>" target="_blank">Link to Article </a></td>
 
 
         <td>
