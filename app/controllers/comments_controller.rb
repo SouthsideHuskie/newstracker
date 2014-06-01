@@ -68,10 +68,12 @@ def my_comments
   @comments = Comment.all
 end
   def alltag
-  @comments = Comment.all
+    @articles = Article.where({ :tag => params[:tag]})
+    @comments = Comment.where({:article_id => @articles})
   end
 
     def mytag
-  @comments = Comment.all
+    @articles = Article.where({ :tag => params[:tag]})
+    @comments = Comment.where({:article_id => @articles}).where({:user_id => current_user.id})
   end
 end

@@ -65,11 +65,12 @@ def my_favorites
 end
 
   def alltag
-    @favorites = Favorite.all
-
+    @articles = Article.where({ :tag => params[:tag]})
+    @favorites = Favorite.where({:article_id => @articles})
   end
 
     def mytag
-    @favorites = Favorite.where({:user_id => current_user.id})
+    @articles = Article.where({ :tag => params[:tag]})
+    @favorites = Favorite.where({:article_id => @articles}).where({:user_id => current_user.id})
   end
 end

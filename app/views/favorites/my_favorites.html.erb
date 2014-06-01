@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Favorites</h1>
+  <h1>My Favorites Index</h1>
 </div>
 
 
@@ -10,7 +10,11 @@
 
       <th>User</th>
 
+      <th>Tag</th>
+
       <th>Article</th>
+
+      <th>Link to Article</th>
 
       <th></th>
       <th></th>
@@ -24,8 +28,12 @@
 
         <td><%= favorite.user.email %></td>
 
+        <td><%= favorite.article.tag %></td>
+
+
         <td><%= favorite.article.title %></td>
 
+        <td><a href="<%= favorite.article.article_url %>">Link to Article</a></td>
 
         <td>
           <a href="/articles/<%= favorite.article_id %>" class="btn btn-primary">
