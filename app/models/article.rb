@@ -7,5 +7,7 @@ class Article < ActiveRecord::Base
   has_many :comments
 
   validates :article_url, :presence => true, :uniqueness => { :scope => :article_url }
-
+  validates :title, :presence => true
+  validates :description, :presence => true
+  validates :tag, :presence => true
 end
